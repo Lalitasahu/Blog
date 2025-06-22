@@ -1,0 +1,52 @@
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+    <title>New User</title>
+</head>
+<body>
+    
+    <form method="POST" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h1>Create New User</h1>
+
+        <label for="username">User Name: </label>
+        <input type="text" name="username" placeholder="Enter Username" /> <br><br>
+
+        <label for="first_name">First Name: </label>
+        <input type="text" name="first_name" placeholder="Enter First Name" /><br> <br>
+
+        <label for="last_name">Last Name: </label>
+        <input type="text" name="last_name" placeholder="Enter Last Name" /> <br><br>
+
+        <label for="email">Email: </label>
+        <input type="text" name="email" placeholder="Enter Email" /><br><br>
+        
+        <label for="password">Password: </label>
+        <input type="password" name="password" placeholder="Enter Password" /> <br><br>
+
+        <label for="phone_no">Phone Number: </label>
+        <input type="text" name="phone_no" id="phone_no" placeholder="Enter your phone no" /> <br><br>
+
+        <label for="is_admin">Are you a superuser?: </label>
+        <input type="radio" name="is_admin" value="True">
+        <label for="is_admin">Yes</label>
+        
+        <input type="radio" name="is_admin" value="False">
+        <label for="is_admin">No</label> 
+        <br><br>
+
+        <label for="image" >Upload your pic</label>
+        <input type="file" name="image" /> <br><br>
+
+        <button type="submit">Create User </button>
+        
+    </form>
+    <!-- <a href="/">Go to Home </a> -->
+</body>
+</html>
